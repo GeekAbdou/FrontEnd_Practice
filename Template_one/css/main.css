@@ -397,3 +397,37 @@ body {
 }
 /* End About us*/
 
+
+
+
+/* Start Contact*/
+.contact{
+    background-color: var(--section-bg-color);
+    text-align: center;
+
+}
+
+.contact .contact-content p:first-of-type{
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin: 0;
+
+}
+
+.contact .contact-content a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.contact .contact-content a i {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+/* End Contact*/
