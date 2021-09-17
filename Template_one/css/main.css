@@ -3,6 +3,11 @@
 /* Start Variables*/
 :root {
     --primary-color: #10cab7;
+    --secondary-color:#24484F;
+    --nav-color:#f2f2f2;
+    --font-color: #777;
+    --section-bg-color:#f6f6f6;
+    --section-title-color:#ebeced;
 }
 
 /* End Variables*/
@@ -49,7 +54,7 @@ body {
     text-align: center;
     font-size: 100px;
     font-weight: 800;
-    color: #ebeced;
+    color: var(--section-title-color);
     letter-spacing: -5px;
     margin: 0;
 }
@@ -57,7 +62,7 @@ body {
 .section-title p {
     text-align: center;
     font-size: 20px;
-    color: #797979;
+    color: var(--font-color);
     letter-spacing: 0;
     font-weight: 400;
     margin: -35px 0 0 0;
@@ -90,7 +95,7 @@ body {
     top: 0;
     left: 0;
     z-index: 99;
-    background-color: #f2f2f2
+    background-color: var(--nav-color);
 }
 
 .header .navbar {
@@ -233,7 +238,7 @@ body {
 
 /* Start Features*/
 .feature {
-    background-color: #f6f6f6;
+    background-color: var(--section-bg-color);
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
@@ -253,7 +258,7 @@ body {
 }
 
 .feature .feature-f p {
-    color: #777;
+    color: var(--font-color);
     line-height: 1.8;
 }
 
@@ -279,14 +284,61 @@ body {
     padding-left: 10px;
 }
 
+.services .services-grid p{
+    color: var(--font-color);;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+    .services .services-grid .col {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 1200px) {
+    .services .col .serv-img img {
+        display: none;
+    }
+}
+
+
 
 /* End Services */
 
 
 /* Start Portfolio */
 .portfolio{
-    background-color: #f6f6f6;
+    background-color: var(--section-bg-color);
 
 }
+
+.portfolio .Portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.portfolio .Portfolio-grid .col {
+    background-color: white;
+}
+
+.portfolio .Portfolio-grid .col img{
+    max-width: 100%;
+    min-height: 250px;
+}
+
+.portfolio .Portfolio-grid .col h3{
+    padding-left: 20px;
+}
+.portfolio .Portfolio-grid .col p{
+    padding-left: 20px;
+    
+    color: var(--font-color);;
+    line-height: 1.6;
+}
+
 
 /* End Portfolio */
