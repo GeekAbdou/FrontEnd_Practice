@@ -311,7 +311,6 @@ body {
 /* Start Portfolio */
 .portfolio{
     background-color: var(--section-bg-color);
-
 }
 
 .portfolio .Portfolio-grid{
@@ -335,10 +334,66 @@ body {
 }
 .portfolio .Portfolio-grid .col p{
     padding-left: 20px;
-    
     color: var(--font-color);;
     line-height: 1.6;
 }
 
-
 /* End Portfolio */
+
+
+/* Start About us*/
+
+.about .about-us-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    /*flex-wrap: wrap;*/
+}
+
+@media (max-width:991px) {
+    .about .about-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.about .about-us-container .image {
+    position: relative;
+    
+}
+
+.about .about-us-container .image::before {
+    content: "";
+    position: absolute;
+    background-color: var(--nav-color);
+    width: 100px;
+    height: 100%;
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}.about .about-us-container .image::after {
+    position: relative;
+    
+}
+
+.about .about-us-container img {
+    width: 400px;
+}
+
+.about .about-us-container .text p:first-of-type{
+    font-weight: bold;
+    line-height: 2;
+}
+
+.about .about-us-container .text hr{
+    width: 60%;
+    display: inline-block;
+    border-color: var(--primary-color);
+
+}
+
+.about .about-us-container .text p:last-of-type{
+    color: var(--font-color);
+    line-height: 1.3;
+}
+/* End About us*/
+
