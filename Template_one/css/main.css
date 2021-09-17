@@ -407,6 +407,9 @@ body {
 
 }
 
+.contact .contact-content{
+    margin-top: 50px;
+}
 .contact .contact-content p:first-of-type{
     font-weight: 800;
     font-size: 30px;
