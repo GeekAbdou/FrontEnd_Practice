@@ -11,6 +11,8 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -19,7 +21,7 @@ html {
 
 body {
     font-family: 'Work Sans', sans-serif;
-    background-color: black;
+    background-color: white;
 }
 
 .container {
@@ -49,6 +51,59 @@ body {
 
 /* End Global*/
 
+
+/*Components*/
+
+section{
+    padding: 100px 0;
+    text-align: center;
+}
+
+section .section-content h2{
+    position: relative;
+    font-weight: normal;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+section .section-content h2::before{
+    content: '';
+    width: 150px;
+    background-color: black;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    height: 2px;
+    transform: translateX(-50%);
+}
+
+section .section-content h2::after{
+    content: '';
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    height: 16px;
+    width: 16px;
+    border: 1px solid black;
+    transform: translateX(-50%);
+}
+
+section .section-content p{
+    width: 50%;
+    margin: 0 auto ;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+
+
+
+/*Components*/
+
+
 /* Header*/
 header {
     position: absolute;
@@ -71,13 +126,12 @@ header .container::after {
     height: 1px;
     background-color: #a2a2a2;
     bottom: 0;
-    width: 100%;
-    z-index: -1;
+    width: calc(100%);
+    left: 0px;
 
 }
 
 header .logo {
-
     height: 40px;
 }
 
@@ -85,6 +139,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex: 1; /**/
 }
 
 header nav .toggle-menu {
@@ -130,11 +185,13 @@ header nav ul {
 }
 
 header nav ul li a {
-    display: block;
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
     padding: 40px 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
 }
 
 header nav .search {
@@ -160,13 +217,11 @@ header nav ul li a:hover {
 /* Leading */
 
 .landing {
-    background-color: cyan;
-    /*alternative*/
-    background-image: url("../assets/img/landing.jpg");
+    background-color: cyan; /*alternative*/
     background-size: cover;
-    position: absolute;
+    position: relative;
     min-height: 100vh;
-    width: 204.8vh;
+    background-image: url("../assets/img/landing.jpg");
 }
 
 .landing .overlay{
@@ -193,6 +248,7 @@ header nav ul li a:hover {
 
 }
 
+
 .landing .overlay .slide h2{
     margin: 0;
     padding: 0;
@@ -209,6 +265,16 @@ header nav ul li a:hover {
     width: 70%;
 }
 
+@media (max-width: 767px) {
+
+    .landing .overlay .slide {
+        width: 100%;
+    }
+
+    .landing .overlay .slide .slide-text{
+        max-width: 100%;
+    }
+}
 .landing i:first-of-type{
     color: white;
     position: absolute;
@@ -253,7 +319,39 @@ header nav ul li a:hover {
     
 
 }
-    
-
 
 /* Leading */
+
+/* Services */
+
+section .services-grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    text-align: initial;
+}
+
+section .services-grid .col{
+    display: flex;
+}
+
+
+section i{
+padding-right: 50px;
+
+}
+
+section .serv-content h2{
+    display: flex;
+    color: var(--main-color);
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+section .serv-content p{
+    color: #777;
+    line-height: 2;
+}
+/* Services */
