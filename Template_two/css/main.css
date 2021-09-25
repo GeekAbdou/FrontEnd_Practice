@@ -4,6 +4,7 @@
 :root {
     --main-color: #00C7FC;
     --trans-color: rgb(15 116 143 /70%);
+    --section-padding: 100px;
 }
 
 /* End Variables*/
@@ -22,6 +23,10 @@ html {
 body {
     font-family: 'Work Sans', sans-serif;
     background-color: white;
+}
+
+ul {
+    list-style: none;
 }
 
 .container {
@@ -54,12 +59,11 @@ body {
 
 /*Components*/
 
-section{
-    padding: 100px 0;
+section {
     text-align: center;
 }
 
-section .section-content h2{
+section .section-content h2 {
     position: relative;
     font-weight: normal;
     font-size: 40px;
@@ -67,7 +71,7 @@ section .section-content h2{
     margin-bottom: 70px;
 }
 
-section .section-content h2::before{
+section .section-content h2::before {
     content: '';
     width: 150px;
     background-color: black;
@@ -78,7 +82,7 @@ section .section-content h2::before{
     transform: translateX(-50%);
 }
 
-section .section-content h2::after{
+section .section-content h2::after {
     content: '';
     border-radius: 50%;
     background-color: white;
@@ -91,9 +95,9 @@ section .section-content h2::after{
     transform: translateX(-50%);
 }
 
-section .section-content p{
+section .section-content p {
     width: 50%;
-    margin: 0 auto ;
+    margin: 0 auto;
     max-width: 100%;
     line-height: 2;
     color: #777;
@@ -139,7 +143,8 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex: 1; /**/
+    flex: 1;
+    /**/
 }
 
 header nav .toggle-menu {
@@ -217,24 +222,26 @@ header nav ul li a:hover {
 /* Leading */
 
 .landing {
-    background-color: cyan; /*alternative*/
+    background-color: cyan;
+    /*alternative*/
     background-size: cover;
     position: relative;
     min-height: 100vh;
     background-image: url("../assets/img/landing.jpg");
+
 }
 
-.landing .overlay{
+.landing .overlay {
     position: absolute;
     width: 100%;
-    height:  100%;
+    height: 100%;
     left: 0;
     top: 0;
     background-color: rgb(0 0 0 / 60%);
     z-index: 1;
 }
 
-.landing .overlay .slide{
+.landing .overlay .slide {
     position: absolute;
     left: 0;
     top: 50%;
@@ -249,7 +256,7 @@ header nav ul li a:hover {
 }
 
 
-.landing .overlay .slide h2{
+.landing .overlay .slide h2 {
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -257,11 +264,12 @@ header nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.landing .overlay .slide p{
+.landing .overlay .slide p {
     line-height: 1.6;
     font-size: 15px;
 }
-.landing .overlay .slide .slide-text{
+
+.landing .overlay .slide .slide-text {
     width: 70%;
 }
 
@@ -271,29 +279,30 @@ header nav ul li a:hover {
         width: 100%;
     }
 
-    .landing .overlay .slide .slide-text{
+    .landing .overlay .slide .slide-text {
         max-width: 100%;
     }
 }
-.landing i:first-of-type{
+
+.landing i:first-of-type {
     color: white;
     position: absolute;
     left: 20px;
-    top:50%;
+    top: 50%;
     z-index: 2
 }
 
-.landing i:nth-of-type(2){
+.landing i:nth-of-type(2) {
     color: white;
     position: absolute;
     right: 20px;
-    top:50%;
+    top: 50%;
     z-index: 3;
     display: flex;
 
 }
 
-.landing .bullets{
+.landing .bullets {
     display: flex;
     position: absolute;
     left: 50%;
@@ -316,7 +325,7 @@ header nav ul li a:hover {
 .landing .bullets li.active {
     background-color: var(--main-color);
     border: 1px solid var(--main-color);
-    
+
 
 }
 
@@ -324,34 +333,131 @@ header nav ul li a:hover {
 
 /* Services */
 
-section .services-grid{
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+section .services-grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     grid-column-gap: 40px;
     grid-row-gap: 60px;
     text-align: initial;
 }
 
-section .services-grid .col{
+section .services-grid .col {
     display: flex;
+    padding-top: 50px;
 }
 
 
-section i{
-padding-right: 50px;
+section i {
+    padding-right: 50px;
 
 }
 
-section .serv-content h2{
+section .serv-content h2 {
     display: flex;
     color: var(--main-color);
     justify-content: flex-start;
     padding-bottom: 20px;
 }
 
-section .serv-content p{
+section .serv-content p {
     color: #777;
     line-height: 2;
 }
+
 /* Services */
+
+/*Features*/
+
+
+
+.feature {
+    padding-bottom: var(--section-padding);
+
+}
+
+.feature .fet-background {
+    position: relative;
+    background-image: url(../assets/img/design-features.jpg);
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+.feature .overlay {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.feature .fet-content {
+    padding-bottom: var(--section-padding);
+    padding-top: var(--section-padding);
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    display: flex;
+    align-items: center;
+}
+
+.feature .fet-content .image {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .feature .fet-content .image {
+        display: none;
+    }
+}
+
+.feature .fet-content .image  img{
+    position: relative;
+    bottom: -150px;
+}
+
+.feature .fet-content .fet-text {
+    color: white;
+    padding: 50px;
+    background-color: var(--trans-color);
+    flex: 1;
+    text-align: initial;
+}
+
+.feature .fet-content .fet-text h2{
+    font-weight: normal;
+    margin-bottom: 50px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.feature .fet-content .fet-text ul li{
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.feature .fet-content .fet-text ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+}
+
+/*Features*/
+
+/* Portfolio */
+
+
+.portfolio {
+    padding-bottom: var(--section-padding);
+}
+
+/* Portfolio */
