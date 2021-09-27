@@ -103,7 +103,11 @@ section .section-content p {
     color: #777;
 }
 
-
+@media (max-width: 768px) {
+    section .section-content p {
+        width: 100%;
+    }
+}
 
 /*Components*/
 
@@ -368,7 +372,45 @@ section .serv-content h2 {
 section .serv-content p {
     color: #777;
     line-height: 2;
+    display: flex;
+    flex-wrap: nowrap;
 }
+
+
+@media (max-width: 768px) {
+    section .services-grid .col {
+        text-align: center;
+        width: 75%;
+        margin-bottom: 20px;
+        margin-top: 80px;
+    }
+
+    section .services-grid .serv-content {
+        text-align: center;
+        width: 70%;
+    }
+
+    section .services-grid .serv-content i,
+    section .services-grid .serv-content h2
+    {
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    section .services-grid .serv-content p
+    {
+        position: absolute;
+        right: 0px;
+
+    }
+
+
+
+
+
+}
+
 
 /* Services */
 
@@ -558,13 +600,13 @@ section .serv-content p {
 
 /* Video */
 
-.video-section{
+.video-section {
     position: relative;
     padding-bottom: var(--section-padding);
 }
 
 
-.video-section .caption{
+.video-section .caption {
     position: absolute;
     width: 100%;
     bottom: 50%;
@@ -574,28 +616,29 @@ section .serv-content p {
     padding-bottom: 50px;
     padding-top: 50px;
     transform: translateY(50%);
-}   
+}
 
-.video-section .caption h4{
+.video-section .caption h4 {
     margin-bottom: 25px;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 400;
-}   
+}
 
-.video-section .caption p{
+.video-section .caption p {
     margin-bottom: 20px;
     font-size: 20px;
-}   
+}
 
-.video-section .caption a{
+.video-section .caption a {
     background-color: black;
     color: white;
     padding: 10px 20px;
     border: none;
     text-transform: uppercase;
     text-decoration: none;
-}  
+}
+
 /* Video */
 
 /* About us*/
@@ -604,7 +647,8 @@ section .serv-content p {
     overflow: hidden;
 
 }
-.about-us img{
+
+.about-us img {
     position: relative;
     bottom: -120px;
     margin-top: -50px;
@@ -614,7 +658,7 @@ section .serv-content p {
 /*Stats*/
 
 
-.about-us .stats .image{
+.about-us .stats .image {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     text-align: center;
@@ -623,7 +667,8 @@ section .serv-content p {
     position: relative;
     height: 450px;
 }
-.about-us .stats .image::before{
+
+.about-us .stats .image::before {
     content: '';
     position: absolute;
     left: 0;
@@ -633,13 +678,12 @@ section .serv-content p {
     background-color: rgb(0 0 0/ 70%);
 }
 
-.about-us .stats .container{
+.about-us .stats .container {
     position: relative;
     display: flex;
-    flex-wrap: wrap;  
 }
 
-.about-us .stats .box{
+.about-us .stats .box {
     color: white;
     padding: 50px;
     background-color: var(--trans-color);
@@ -648,7 +692,28 @@ section .serv-content p {
     top: -350px;
 }
 
-.about-us .stats .box i{
+@media (min-width: 767px) {
+    .about-us .stats .box {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-us .stats .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1170px) {
+    .about-us .stats .box {
+        flex-basis: 25%;
+    }
+}
+
+
+
+
+.about-us .stats .box i {
     background-color: rgb(0 0 0 / 80%);
     border-radius: 50%;
     padding: 10px;
@@ -656,7 +721,7 @@ section .serv-content p {
 }
 
 
-.about-us .stats .box .number{
+.about-us .stats .box .number {
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 25px;
