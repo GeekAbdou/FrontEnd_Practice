@@ -256,7 +256,7 @@ header nav ul li a:hover {
     display: flex;
     width: 50%;
     justify-content: flex-end;
-
+    text-align: initial;
 }
 
 
@@ -264,7 +264,7 @@ header nav ul li a:hover {
     margin: 0;
     padding: 0;
     font-weight: 400;
-    font-size: 37px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -393,7 +393,7 @@ section .serv-content p {
     section .services-grid .serv-content i,
     section .services-grid .serv-content h2
     {
-        padding: 10px;
+        padding-bottom: 30px;
         text-align: center;
         justify-content: center;
     }
@@ -655,20 +655,30 @@ section .serv-content p {
     max-width: 100%;
 }
 
+@media (max-width: 768px) {
+    .about-us img {
+        width: 70%;
+        bottom: -50px;
+        margin-top: 15px;
+    }
+}
+
+/* About us*/
+
+
 /*Stats*/
 
-
-.about-us .stats .image {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+.stats .image {
+    padding-top: calc(var(--section-padding)/2);
+    padding-bottom: calc(var(--section-padding)/2);
     text-align: center;
     background-image: url("../assets/img/stats.png");
     background-size: cover;
     position: relative;
-    height: 450px;
+
 }
 
-.about-us .stats .image::before {
+.stats .image::before {
     content: '';
     position: absolute;
     left: 0;
@@ -678,42 +688,45 @@ section .serv-content p {
     background-color: rgb(0 0 0/ 70%);
 }
 
-.about-us .stats .container {
+.stats .container {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.about-us .stats .box {
+.stats .box {
+    position: relative;
     color: white;
     padding: 50px;
     background-color: var(--trans-color);
-    flex-basis: 25%;
-    position: relative;
-    top: -350px;
+}
+
+@media (max-width: 767px) {
+    .stats .container {
+        width: 70%;
+    }
+    .stats .container .box{
+        flex-basis: 100%;
+    }
+    
 }
 
 @media (min-width: 767px) {
-    .about-us .stats .box {
-        flex-basis: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .about-us .stats .box {
+    .stats .container .box{
         flex-basis: 50%;
     }
+    
 }
 
 @media (min-width: 1170px) {
-    .about-us .stats .box {
+    .stats .container .box{
         flex-basis: 25%;
     }
+
 }
 
 
-
-
-.about-us .stats .box i {
+.stats .box i {
     background-color: rgb(0 0 0 / 80%);
     border-radius: 50%;
     padding: 10px;
@@ -721,7 +734,7 @@ section .serv-content p {
 }
 
 
-.about-us .stats .box .number {
+.stats .box .number {
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 25px;
@@ -730,4 +743,3 @@ section .serv-content p {
 /*Stats*/
 
 
-/* About us*/
