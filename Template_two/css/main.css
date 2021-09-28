@@ -391,15 +391,13 @@ section .serv-content p {
     }
 
     section .services-grid .serv-content i,
-    section .services-grid .serv-content h2
-    {
+    section .services-grid .serv-content h2 {
         padding-bottom: 30px;
         text-align: center;
         justify-content: center;
     }
 
-    section .services-grid .serv-content p
-    {
+    section .services-grid .serv-content p {
         position: absolute;
         right: 0px;
 
@@ -590,7 +588,6 @@ section .serv-content p {
     color: white;
     padding: 15px 20px;
     display: block;
-    width: fit-content;
     margin: 30px auto;
     text-decoration: none;
     text-transform: uppercase;
@@ -705,21 +702,22 @@ section .serv-content p {
     .stats .container {
         width: 70%;
     }
-    .stats .container .box{
+
+    .stats .container .box {
         flex-basis: 100%;
     }
-    
+
 }
 
 @media (min-width: 767px) {
-    .stats .container .box{
+    .stats .container .box {
         flex-basis: 50%;
     }
-    
+
 }
 
 @media (min-width: 1170px) {
-    .stats .container .box{
+    .stats .container .box {
         flex-basis: 25%;
     }
 
@@ -742,4 +740,337 @@ section .serv-content p {
 
 /*Stats*/
 
+/*skills*/
+.skills {
+    padding-top: var(--section-padding);
+}
 
+.skills .skills-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .skills .skills-content {
+        display: block;
+
+    }
+
+
+}
+
+.skills .skills-content>div {
+    flex-basis: 45%;
+}
+
+.skills .skills-content>div>h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.skills .skills-content>div>p {
+    font-weight: normal;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.skills .skills-content .testimonials img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.skills .skills-content .testimonials .testimony {
+    display: flex;
+}
+
+.skills .skills-content .testimonials .testimony p {
+    text-align: initial;
+    line-height: 2;
+}
+
+.skills .skills-content .testimonials .testimony span {
+    color: #777;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .testimonials .testimony hr {
+    color: rgb(216, 216, 216);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.skills .skills-content .testimonials .bullets {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.skills .skills-content .testimonials .bullets li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.skills .skills-content .testimonials .bullets li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+
+
+.skills .prog-holder {
+    margin-bottom: 40px;
+}
+
+.skills .prog-holder h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: initial;
+}
+
+.skills .prog-holder .prog {
+    background-color: #dedadc;
+    height: 30px;
+}
+
+.skills .prog-holder .prog span {
+    display: block;
+    background-color: var(--main-color);
+    height: 100%;
+    position: relative;
+}
+
+.skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: -40px;
+    right: -18px;
+    padding: 4px 0;
+    width: 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+    border-color: black transparent transparent;
+    right: -8px;
+    top: -15px;
+}
+
+/*skills*/
+
+
+/*pricing*/
+
+.pricing .section-content {
+    padding-bottom: var(--section-padding);
+}
+
+.pricing {
+    padding-bottom: var(--section-padding);
+}
+
+/*plans*/
+.pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing .plans .plan {}
+
+.pricing .plans .plan .price {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan .price h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.pricing .plans .plan .price sup {
+    font-size: 25px;
+    top: -40px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+
+.pricing .plans .plan .price span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.pricing .plans .plan .price sub {
+    font-size: 20px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.pricing .plans .plan ul {
+    border-bottom: 1px solid var(--main-color);
+
+}
+
+.pricing .plans .plan ul li {
+    position: relative;
+    padding: 20px;
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    width: 140px;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.pricing .plans a {
+    display: block;
+    padding: 20px;
+    margin-top: 25px;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    text-decoration: none;
+}
+
+/*plans*/
+
+
+.pricing .contact-us p {
+    text-align: center;
+    margin: 50px auto 50px;
+    font-size: 20px;
+}
+
+.pricing .contact-us a {
+    padding: 20px;
+    text-decoration: none;
+    background-color: var(--main-color);
+    margin-top: 25px;
+    color: white;
+}
+
+/*pricing*/
+
+
+/* subscribe*/
+
+
+.subscribe {
+    background-image: url("../assets/img/subscribe.jpg");
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+
+}
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.subscribe p {
+    line-height: 2;
+    margin-left: 50px;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .subscribe p {
+        margin: 30px 0 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+
+.subscribe form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+
+.subscribe form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    color: white;
+}
+
+
+
+.subscribe form input[type="email"] {
+    border: 1px solid white;
+    border-right: none;
+    background: none;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+    color: white;
+}
+
+.subscribe form input[type="submit"] {
+    width: 130px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-left: none;
+    text-transform: uppercase;
+}
+
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus {
+    outline: none;
+}
+
+
+
+
+/* subscribe*/
