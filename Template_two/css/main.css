@@ -1072,14 +1072,116 @@ section .serv-content p {
 
 /* subscribe*/
 
+
+/*Contact-us*/
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form .form {
+    flex-basis: 80%;
+}
+
+.contact-form .details {
+    flex-basis: 20%;
+}
+
+.form form input:not(:last-child) {
+    padding: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    width: 100%;
+    color: rgb(85, 85, 85);
+
+}
+
+.form form textarea {
+    padding: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 200px;
+}
+
+.form form input[type="submit"] {
+    padding: 20px;
+    display: block;
+    border: none;
+    margin-bottom: 30px;
+    justify-content: flex-end;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details .phones {
+    flex-basis: 25%;
+}
+
+.details .address {
+    flex-basis: 65%;
+}
+
+.details h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.details p,
+.details address {
+    color: rgb(148, 148, 148);
+    line-height: 2;
+}
+
+.contact-form .form input[type="text"]:focus,
+.contact-form .form input[type="email"]:focus,
+.contact-form .form textarea:focus {
+    outline: none;
+    color: rgb(50, 50, 50);
+}
+
+@media (max-width:767px) {
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form form input[type="submit"] {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/*Contact-us*/
+
+
+
 /* footer */
-.footer{
+.footer {
     background-image: url(../assets/img/subscribe.jpg);
     padding-bottom: 50px;
     padding-top: 50px;
     position: relative;
 }
-.footer::before{
+
+.footer::before {
     content: '';
     position: absolute;
     left: 0;
@@ -1090,17 +1192,17 @@ section .serv-content p {
 }
 
 
-.footer .logo{
+.footer .logo {
     text-align: center;
     margin-bottom: 50px;
 }
 
 
-.footer .logo img{
+.footer .logo img {
     height: 40px;
 }
 
-.footer p{
+.footer p {
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -1108,23 +1210,24 @@ section .serv-content p {
     margin-bottom: 20px;
 }
 
-.footer .icons{
+.footer .icons {
     text-align: center;
 }
 
-.footer i{
+.footer i {
     color: white;
     padding-left: 25px;
     margin-bottom: 20px;
     margin-top: 25px;
 }
 
-.footer .copyright{
+.footer .copyright {
     margin-top: 30px;
     font-size: 14px;
 }
 
-.footer .copyright span{
+.footer .copyright span {
     color: var(--main-color);
 }
+
 /* footer */
