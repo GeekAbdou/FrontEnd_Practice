@@ -47,7 +47,7 @@
 }
 
 .row--centered {
-  text-align: center;
+  align-items: center;
 }
 
 .row [class^=col] {

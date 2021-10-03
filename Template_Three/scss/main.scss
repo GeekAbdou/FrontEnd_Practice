@@ -1,14 +1,36 @@
+@import "helper";
 @import "variables";
 @import "grid";
 @import "theme";
-@import "helper";
+
 // Global
-body{
-    font-family: $body-font;
+body {
+  font-family: $body-font;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: $heading-font;
-    color: $heading-color;
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  height: auto;
+  width: 100%;
 }
 // Global

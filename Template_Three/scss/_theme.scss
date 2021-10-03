@@ -1,32 +1,151 @@
-// Header
-a {
-    color: $link-color;
-    text-decoration: none;
-     
-    &:hover{
-        color: $primary-color;
-    }
+/* Components */
+
+
+/*info-block*/
+
+.info-block__head{
+  @include uppercase();
+  color: $primary-color;
+  display: block;
 }
-.site-header{
 
-    padding: 40px 0;
+.info-block__title {
+  h1,h2.h3,h4,h5,h6{
+    font-size: 60px;
+    color: black ;
+    margin-bottom: 15px;
+  }
+}
 
-    .site-nav{
+.info-block__body{
+  p{
+    width: 30%;
+    color: $p-color;
+    line-height: 1.8;
+    margin-bottom: 50px;
 
-        ul{
+  }
+}
 
-            li{
-                display: inline-block;
-                font-weight: bold;
-                text-transform: uppercase;
-                letter-spacing: 4px;
-                margin-right: 45px;
-                font-size: 13px;
-            }
-            a{
-                display: block;
-            }
+.info-block__cta{
+  display: block;
+
+
+  a{
+    @include uppercase();
+    @include link();
+    padding-bottom: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid $primary-color;
+    width: fit-content;
+  }
+}
+
+.info-block__title--underline{
+  &:after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: $primary-color;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+/*info-block*/
+
+/* components */
+
+
+
+
+
+// Header
+.site-header {
+  padding: 35px 0;
+
+  .site-logo{
+    img{
+      width: 16px;
+      height: 44px;
+    }
+  }
+
+
+  .site-nav {
+    ul {
+
+      li {
+        display: inline-block;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin: 0 40px;
+        font-size: 11px;
+      }
+
+      a {
+        @include link();
+        &:hover {
+          color: $primary-color;
         }
+      }
+
     }
+
+  }
 }
-// Header
+
+@media (max-width: 992px) {
+
+  .site-header{
+    text-align: center;
+
+    .site-logo {
+        text-align: center;
+      }
+
+    ul{
+      margin: 20px;
+
+      a{
+        margin: 5px 0;
+      }
+
+    }
+
+  }
+
+
+}
+
+//Header
+
+
+
+//Landing
+
+.landing__slide{
+  position: relative;
+  .landing-img{
+    text-align: right;
+    img{
+      width: 88%;
+    }
+  }
+  
+  .landing-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+  
+}
+
+
+
+
+
+//Landing
