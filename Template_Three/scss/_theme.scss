@@ -1,0 +1,32 @@
+// Header
+a {
+    color: $link-color;
+    text-decoration: none;
+     
+    &:hover{
+        color: $primary-color;
+    }
+}
+.site-header{
+
+    padding: 40px 0;
+
+    .site-nav{
+
+        ul{
+
+            li{
+                display: inline-block;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                margin-right: 45px;
+                font-size: 13px;
+            }
+            a{
+                display: block;
+            }
+        }
+    }
+}
+// Header
