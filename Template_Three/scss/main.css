@@ -459,6 +459,36 @@
   letter-spacing: 4px;
 }
 
+.surfing {
+  padding-top: 260px;
+  position: relative;
+  margin-bottom: 300px;
+}
+
+.surfing .surfing__surf-1 {
+  position: relative;
+  margin: 0;
+  width: 650px;
+  height: 370px;
+  top: -50px;
+}
+
+.surfing .surfing__surf-2 {
+  position: absolute;
+  right: 0;
+  width: 700px;
+  height: 553px;
+  -webkit-box-shadow: 50px 50px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 50px 50px 40px rgba(0, 0, 0, 0.2);
+  margin-left: -20px;
+}
+
+.surfing .surfing__caption p {
+  width: 30%;
+  -webkit-transform: translateX(25%);
+          transform: translateX(25%);
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
