@@ -1,0 +1,16 @@
+@use './variables' as *;
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background-color: $primary-color;
+
+  &--centered {
+    margin: 0 auto;
+  }
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
