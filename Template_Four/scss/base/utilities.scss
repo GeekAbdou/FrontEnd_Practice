@@ -1,5 +1,3 @@
-@use './variables' as *;
-
 .divider {
   width: 60px;
   height: 2px;
@@ -8,6 +6,25 @@
   &--centered {
     margin: 0 auto;
   }
+}
+
+
+// utility
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
 }
 
 .centered {

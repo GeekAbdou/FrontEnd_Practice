@@ -1,28 +1,3 @@
-// utility
-
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-
-.center {
-    margin-right: auto;
-    margin-left: auto;
-
-    text-align: center;
-}
-
-.justify {
-    text-align: justify;
-}
-
-.hidden-sm {
-    display: none;
-}
-
 // grid
 
 $width: 98%;
@@ -30,27 +5,6 @@ $gutter: 2%;
 $breakpoint-small: 768px; //33.75em; // 540px
 $breakpoint-med: 992px; //45em; // 720px
 $breakpoint-large: 1200px; // 60em; // 960px
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-
-    @media (min-width: 768px) {
-        width: 768px;
-    }
-    /* Medium */
-    @media (min-width: 992px) {
-        width: 992px;
-      
-    }
-    /* Large */
-    @media (min-width: 1200px) {
-        width: 1300px;
-      
-    }
-}
-
-
 
 .row {
     width: 100%;
