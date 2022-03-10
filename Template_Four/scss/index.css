@@ -152,53 +152,6 @@ h6 {
   }
 }
 
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
-.center {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
-.justify {
-  text-align: justify;
-}
-
-.hidden-sm {
-  display: none;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  /* Medium */
-  /* Large */
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 992px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1300px;
-  }
-}
-
 .row {
   width: 100%;
 }
